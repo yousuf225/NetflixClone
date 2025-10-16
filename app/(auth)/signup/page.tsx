@@ -19,7 +19,7 @@ export default function SignUp() { // <-- Uppercase name
     setError("");
 
     try {
-      const res = await fetch(`${process.env.NEXTAUTH_URL}/api/auth/signup`, {
+      const res = await fetch(`/api/auth/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
